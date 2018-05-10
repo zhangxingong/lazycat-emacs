@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Emacs 主题设置 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defvar emacs-font-name "文泉驿等宽微米黑"
+(defvar emacs-font-name "Droid Sans Mono"
   "The font name of English.")
-(defvar emacs-font-size 12
+(defvar emacs-font-size 14
   "The default font size.")
 (if (display-grayscale-p)
     (progn
