@@ -21,7 +21,7 @@
   (require 'init-mode)
   (require 'init-qt)
   (require 'init-dired)
-  (require 'init-rtags)
+  ;; (require 'init-rtags)
   (require 'init-session)
   (require 'init-paredit)
   (require 'init-indent)
