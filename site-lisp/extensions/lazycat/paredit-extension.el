@@ -273,10 +273,19 @@ Will delete blank line after execute `paredit-splice-sexp'."
 
 (defun paredit-open-curly-smart ()
   (interactive)
-  (paredit-open-curly)
-  (indent-according-to-mode)
-  (comment-indent-new-line)
-  (open-newline-above 1)
+  (if (or
+       (eq major-mode 'rjsx-mode)
+       (eq major-mode 'js-mode)
+       (eq major-mode 'js2-mode)
+       (eq major-mode 'ruby-mode))
+      ;; Just do same as `paredit-open-curly' in some mode.
+      (paredit-open-curly)
+    ;; Otherwise do something smart operation.
+    (paredit-open-curly)
+    (indent-according-to-mode)
+    (comment-indent-new-line)
+    (open-newline-above 1)
+    )
   )
 
 (provide 'paredit-extension)
