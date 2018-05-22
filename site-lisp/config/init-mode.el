@@ -137,6 +137,7 @@
                     ("\\.vapi$" . vala-mode)
                     ("\\.rs$" . rust-mode)
                     ("\\.pro$" . qmake-mode)
+                    ("\\.js$" . rjsx-mode)
                     ))
   (add-to-alist 'auto-mode-alist elt-cons))
 
@@ -158,6 +159,7 @@
 (autoload 'rust-mode "rust-mode")
 (autoload 'qmake-mode "qmake-mode")
 (autoload 'ruby-mode "init-ruby")
+(autoload 'rjsx-mode "init-reactjs")
 
 ;;; ### Auto-fill ###
 ;;; --- 自动换行
