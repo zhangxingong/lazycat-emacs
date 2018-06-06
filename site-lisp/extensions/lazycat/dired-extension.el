@@ -2,13 +2,13 @@
 
 ;; Author: Andy Stewart lazycat.manatee@gmail.com
 ;; Maintainer: Andy Stewart lazycat.manatee@gmail.com
-;; Copyright (C) 2008, 2009, Andy Stewart, all rights reserved.
+;; Copyright (C) 2008 ~ 2016, Andy Stewart, all rights reserved.
 ;; Created: 2008-10-11 22:57:07
 ;; Version: 0.2
 ;; Last-Updated: 2018-06-06 11:26:19
 ;; URL:
 ;; Keywords: dired
-;; Compatibility: GNU Emacs 23.0.60.1
+;; Compatibility: GNU Emacs 27.0.50
 
 ;; This file is not part of GNU Emacs
 
