@@ -132,6 +132,15 @@
    )
  markdown-ts-mode-map)
 
+(lazy-load-set-keys
+ '(
+   ("M-f" . deno-bridge-jieba-forward-word)
+   ("M-b" . deno-bridge-jieba-backward-word)
+   ("M-M" . deno-bridge-jieba-kill-word)
+   ("M-N" . deno-bridge-jieba-backward-kill-word)
+   )
+ text-mode-map)
+
 (defun fix-chinese-colons ()
   (interactive)
   (save-excursion
