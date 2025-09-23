@@ -26,6 +26,16 @@
   (defvar lazycat-emacs-config-dir (concat lazycat-emacs-root-dir "/config"))
   (defvar lazycat-emacs-extension-dir (concat lazycat-emacs-root-dir "/extensions"))
 
+;; -------------------------------------------------
+;; Linux 下键盘映射：Menu -> Super, Alt -> Meta
+;; -------------------------------------------------
+(when (eq system-type 'gnu/linux)
+  ;; Menu 键作为 Super
+  (setq x-super-keysym 'Super_L)
+  ;; Alt 键作为 Meta（默认通常就是 Meta，但显式设置）
+  (setq x-alt-keysym 'meta))
+
+
   (with-temp-message ""              ;抹掉插件启动的输出
     ;;(require 'benchmark-init-modes)
     ;;(require 'benchmark-init)
