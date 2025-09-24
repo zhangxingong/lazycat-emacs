@@ -85,6 +85,8 @@
  `(("HOME" "/mnt/d/xgzhang/projects/svn/Elafs/branches/asp")
 ))
 
+(setq warning-minimum-level :error)
+
 ;; 启用中文拼音输入法
 (setq default-input-method "chinese-py")
 
