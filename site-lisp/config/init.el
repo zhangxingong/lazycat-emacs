@@ -78,6 +78,16 @@
 ;; 最大化打开文件数
 ;;(setq w32-max-handles 2048)
 
+(require 'project)
+
+(customize-set-variable
+ 'blink-search-common-directory
+ `(("HOME" "/mnt/d/xgzhang/projects/svn/Elafs/branches/asp")
+))
+
+;; 启用中文拼音输入法
+(setq default-input-method "chinese-py")
+
   (with-temp-message ""              ;抹掉插件启动的输出
     ;;(require 'benchmark-init-modes)
     ;;(require 'benchmark-init)
