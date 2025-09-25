@@ -78,6 +78,24 @@
 ;; 最大化打开文件数
 ;;(setq w32-max-handles 2048)
 
+;;自动加载包下的文件
+(defun my/load-package-autoloads (pkg-dir)
+  "Load autoloads file from PKG-DIR and add it to `load-path'."
+  (let* ((abs-dir (expand-file-name pkg-dir))
+         (autoload-file (car (directory-files abs-dir t "-autoloads\\.el$"))))
+    (when (file-directory-p abs-dir)
+      (add-to-list 'load-path abs-dir)
+      (when autoload-file
+        (load autoload-file)))))
+
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/helm-core-20250923.617")
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601")
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/consult-20250920.1256")
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/marginalia-20250920.852")
+;(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/fcitx-20240121.1829")
+;(fcitx-aggressive-setup)
+;(setq fcitx-use-dbus t)
+
 (require 'project)
 
 (customize-set-variable
@@ -87,8 +105,37 @@
 
 (setq warning-minimum-level :error)
 
+(require 'orderless)
+;; 设置 completion-styles 支持 orderless
+(setq completion-styles '(orderless basic)
+      completion-category-defaults nil
+      completion-category-overrides '((file (styles basic partial-completion))))
+(require 'consult)
+  (setq consult-line-numbers-widen t
+        consult-async-min-input 2
+        consult-async-refresh-delay  0.15
+        consult-async-input-throttle 0.2
+        consult-async-input-debounce 0.1)
+(require 'vertico)
+(define-key vertico-map (kbd "C-j") 'vertico-next)
+(define-key vertico-map (kbd "C-k") 'vertico-previous)
+(vertico-mode 1)
+(marginalia-mode t)
+(setq vertico-cycle t)  ;; 支持循环选择候选项
+(setq helm-split-window-inside-p t
+      helm-move-to-line-cycle-in-source t
+      helm-ff-search-library-in-sexp t
+      helm-scroll-amount 8
+      helm-ff-file-name-history-use-recentf t)
+
+
 ;; 启用中文拼音输入法
-(setq default-input-method "chinese-py")
+;;(setq default-input-method "chinese-py-punct")
+;; 禁用 Emacs 内置输入法
+(setq default-input-method nil)
+(setq shell-file-name "bash")
+
+;;(setq pyim-default-scheme 'quanpin)
 
   (with-temp-message ""              ;抹掉插件启动的输出
     ;;(require 'benchmark-init-modes)
@@ -162,5 +209,6 @@
 
          (require 'init-sort-tab)
          ))))
+
 
 (provide 'init)

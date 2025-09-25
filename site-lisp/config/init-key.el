@@ -596,11 +596,65 @@
 ;; lazy-load 全局快捷键
 (lazy-load-global-keys
  '(
-   ("M-;" . avy-goto-char)
+   ("M-;    " . avy-goto-char)
    ("M-L" . avy-goto-line)
    ("M-W" . avy-goto-word-0)
    ("C-c <SPC>" . avy-goto-word-1)
    )
  "avy")
+
+;; lazy-load 全局快捷键
+;(lazy-load-global-keys
+; '(
+;   ("M-y" . consult-yank-pop)        ; 替代默认 yank-pop
+;   ("C-x b" . consult-buffer)        ; 切换 buffer
+;   ("s-s l" . consult-line)          ; buffer 内搜索
+;   ("s-s i" . consult-imenu)         ; 跳转函数/标题
+;   ("s-e e" . consult-compile-error) ; 原 M-g e → s-e e
+;   ("s-e f" . consult-flymake)       ; 原 M-g f → s-e f
+;   )
+; "consult")
+
+;; 然后绑定键
+(global-set-key (kbd "M-y") 'consult-yank-pop)
+(global-set-key (kbd "C-x b") 'consult-buffer)
+(global-set-key (kbd "s-s l") 'consult-line)
+(global-set-key (kbd "s-s i") 'consult-imenu)
+(global-set-key (kbd "s-e e") 'consult-compile-error)
+(global-set-key (kbd "s-e f") 'consult-flymake)
+;(global-set-key (kbd "C-\\") 'toggle-input-method)
+
+;; iedit
+(lazy-load-global-keys
+ '(("C-c z" . iedit-mode))
+ "iedit")
+
+;; expand-region
+(lazy-load-global-keys
+ '(("C-=" . er/expand-region))
+ "expand-region")
+
+;; move-dup
+(lazy-load-global-keys
+ '(("M-<up>"    . move-dup-move-lines-up)
+   ("M-<down>"  . move-dup-move-lines-down)
+   ("C-M-<up>"  . move-dup-duplicate-up)
+   ("C-M-<down>". move-dup-duplicate-down))
+ "move-dup")
+
+;; imenu-list
+(lazy-load-global-keys
+ '(("s-'" . imenu-list-minor-mode))
+ "imenu-list")
+
+;; lazy-load 全局快捷键（不写 require）
+;(lazy-load-global-keys
+; '(
+;   ("C-x C-f" . helm-fd)          ; 查找文件
+;   ("s-s f"  . helm-for-files)    ; 文件相关操作
+;   ("M-x"    . helm-M-x)          ; 执行命令
+;   ("C-x b"  . helm-buffers-list) ; buffer 切换
+;   )
+; "helm")
 
 (provide 'init-key)
