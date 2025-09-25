@@ -114,8 +114,15 @@
       completion-category-defaults nil
       completion-category-overrides '((file (styles basic partial-completion))))
 (require 'consult)
+;; 让 consult-locate 实际调用 consult-fd
+(defun my-consult-locate-fd (&optional dir initial)
+  "Use `consult-fd' as a replacement for `consult-locate'."
+  (interactive "P")
+  (consult-fd dir initial))
+
+(advice-add 'consult-locate :override #'my-consult-locate-fd)
   (setq consult-locate-command
-        "fd --type f --hidden --exclude .git --exclude .svn  --exclude .idea  --exclude build  --exclude '*.class'  --color=never --full-path %s ."
+        "fd --type f --hidden --exclude .git --exclude .svn --exclude .idea --exclude build --exclude '*.class' --color=never  %s"
         consult-narrow-key "<"
         consult-line-numbers-widen t
         consult-async-min-input 2
