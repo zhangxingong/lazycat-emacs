@@ -596,7 +596,7 @@
 ;; lazy-load 全局快捷键
 (lazy-load-global-keys
  '(
-   ("M-;" . avy-goto-char)
+   ("s-;" . avy-goto-char)
    ("M-L" . avy-goto-line)
    ("M-W" . avy-goto-word-0)
    ("C-c <SPC>" . avy-goto-word-1)
@@ -622,7 +622,7 @@
 (global-set-key (kbd "s-s i") 'consult-imenu)
 (global-set-key (kbd "s-e e") 'consult-compile-error)
 (global-set-key (kbd "s-e f") 'consult-flymake)
-;(global-set-key (kbd "C-\\") 'toggle-input-method)
+(global-set-key (kbd "C-\\") 'toggle-input-method)
 
 ;; iedit
 (lazy-load-global-keys

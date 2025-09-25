@@ -92,6 +92,9 @@
 (my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601")
 (my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/consult-20250920.1256")
 (my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/marginalia-20250920.852")
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/posframe-20250211.110")
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/pyim-20250225.650")
+(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/pyim-basedict-20240923.739")
 ;(my/load-package-autoloads "~/lazycat-emacs/site-lisp/extensions/fcitx-20240121.1829")
 ;(fcitx-aggressive-setup)
 ;(setq fcitx-use-dbus t)
@@ -111,7 +114,10 @@
       completion-category-defaults nil
       completion-category-overrides '((file (styles basic partial-completion))))
 (require 'consult)
-  (setq consult-line-numbers-widen t
+  (setq consult-locate-command
+        "fd --type f --hidden --exclude .git --exclude .svn  --exclude .idea  --exclude build  --exclude '*.class'  --color=never --full-path %s ."
+        consult-narrow-key "<"
+        consult-line-numbers-widen t
         consult-async-min-input 2
         consult-async-refresh-delay  0.15
         consult-async-input-throttle 0.2
@@ -132,10 +138,19 @@
 ;; 启用中文拼音输入法
 ;;(setq default-input-method "chinese-py-punct")
 ;; 禁用 Emacs 内置输入法
-(setq default-input-method nil)
+;;(setq default-input-method nil)
 (setq shell-file-name "bash")
+(require 'pyim)
+(require 'pyim-basedict)
+(pyim-basedict-enable)                ;; 启用简体词库
 
-;;(setq pyim-default-scheme 'quanpin)
+(setq default-input-method "pyim")    ;; 默认输入法设为 pyim
+(setq pyim-default-scheme 'quanpin)   ;; 使用全拼
+(setq pyim-page-tooltip 'posframe)    ;; 候选词用 posframe 显示
+(setq pyim-page-length 7)             ;; 每页显示 7 个候选
+
+;; 标点：中英文自动切换
+(setq pyim-punctuation-translate-p '(yes no auto))
 
   (with-temp-message ""              ;抹掉插件启动的输出
     ;;(require 'benchmark-init-modes)
