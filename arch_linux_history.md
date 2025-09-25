@@ -1,0 +1,190 @@
+- git restore *.el
+- git clean -fd  site-lisp/extensions/
+- git clean -fd   site-lisp/snippets
+- git clean -fd
+- git clean -fd .
+- git restore .
+- git reflog
+- git log
+- git restore site-lisp/extensions/cloel
+- git restore ./site-lisp/extensions/cloel
+- git checkout -- HEAD
+- git restore . && git clean -fd
+- git submodule foreach --recursive 'git reset --hard && git clean -fd'
+- python update_submodule.py 
+- vim site-lisp/config/init.el 
+- vim site-lisp/config/init-key.el 
+- cd site-lisp/extensions/avy-20241101.1357/
+- l
+- fd
+- sudo pacman -S subversion
+- svn --version
+- vim ~/lazycat-emacs/site-lisp/config/init-key-echo.el 
+- curl -L -o consult.tar https://melpa.org/packages/consult-20250920.1256.tar
+- cd ~/lazycat
+- curl -L -o consult.tar https://melpa.org/packages/orderless-20250922.1344.tar
+- curl -L -o consult.tar https://melpa.org/packages/vertico-20250908.1638.tar
+- curl -L -o https://melpa.org/packages/helm-20250923.601.tar
+- curl -L -o consult.tar https://melpa.org/packages/helm-20250923.601.tar
+- . emacs-helm.sh 
+- cd site-lisp/
+- cd extensions/
+- fd helm-20250923.601
+- cd lazycat-emacs/site-lisp/extensions/helm-20250923.601/
+- curl -L -o consult.tar https://melpa.org/packages/helm-core-20250923.617.tar
+- curl -L -o consult.tar https://melpa.org/packages/async-20250831.1225.tar
+- tar -xf consult.tar
+- sed 80:  ~/lazycat-emacs/site-lisp/config/init-key.el
+- sed 80:%  ~/lazycat-emacs/site-lisp/config/init-key.el
+- sed 80:$  ~/lazycat-emacs/site-lisp/config/init-key.el
+- sed -n '101,$p' ~/lazycat-emacs/site-lisp/config/init-key.el
+- sed -e 80:$  ~/lazycat-emacs/site-lisp/config/init-key.el
+- cd ~/lazycat-emacs/site-lisp/extensions/
+- cd helm-20250923.601/
+- vim helm.el 
+- emacs -Q --batch -L .       --eval "(update-directory-autoloads \".\")"
+- emacs -Q
+- :
+- emacs -Q --batch -L ~/lazycat-emacs/site-lisp/extensions/helm-20250923.601       --eval "(update-directory-autoloads \"~/lazycat-emacs/site-lisp/extensions/helm-20250923.601\")"
+-                (dolist (file (directory-files "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601" t "\\.el$"))
+-                  (update-file-autoloads file))
+- emacs -Q --batch       -L ~/lazycat-emacs/site-lisp/extensions/helm-20250923.601       --eval '(let ((generated-autoload-file
+-                      (expand-file-name "helm-autoloads.el"
+-                                        "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601")))
+-                (require '\''autoload)
+-                (batch-update-autoloads "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601")
+-                (message "helm-autoloads.el generated successfully."))'
+- emacs -Q --batch       -L ~/lazycat-emacs/site-lisp/extensions/helm-20250923.601       --eval '(require '\''autoload) \
+-       --eval '(setq generated-autoload-file
+-                     (expand-file-name "helm-autoloads.el";                                       "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601")) \
+-       --eval '(batch-update-autoloads "~/lazycat-emacs/site-lisp/extensions/helm-20250923.601") \
+-       --eval '(message "helm-autoloads.el generated successfully.")'
+- emacs -Q --batch -L ~/lazycat-emacs/site-lisp/extensions/helm-20250923.601       --eval "(require 'autoload)"       --eval "(setq generated-autoload-file (expand-file-name \"helm-autoloads.el\" \"~/lazycat-emacs/site-lisp/extensions/helm-20250923.601\"))"       --eval "(batch-update-autoloads \"~/lazycat-emacs/site-lisp/extensions/helm-20250923.601\")"       --eval "(message \"helm-autoloads.el generated successfully.\")"
+- emacs -Q --batch -L ~/lazycat-emacs/site-lisp/extensions/helm-20250923.601       --eval "(setq generated-autoload-file (expand-file-name \"helm-autoloads.el\" \"~/lazycat-emacs/site-lisp/extensions/helm-20250923.601\"))"       --eval "(mapc #'update-file-autoloads (directory-files \"~/lazycat-emacs/site-lisp/extensions/helm-20250923.601\" t \"\\\\.el$\"))"       --eval "(message \"helm-autoloads.el generated successfully.\")"
+- vim helm-buffers.el 
+- emacs /mnt/d/xgzhang/projects/svn/Elafs/branche:cs/asp &
+- curl -L -o consult.tar https://melpa.org/packages/imenu-list-20210420.1200.tar
+- history | grep mv
+- curl -L -o consult.tar https://melpa.org/packages/expand-region-20241217.1840.tar
+- curl -L -o consult.tar https://melpa.org/packages/move-dup-20210127.1938.tar
+- curl -L -o consult.tar https://melpa.org/packages/hungry-delete-20210409.1643.tar
+- history | grep init-ke
+- curl -L -o consult.tar https://melpa.org/packages/iedit-20220216.717.tar
+- vim ~/lazycat-emacs/site-lisp/config/init-key.el
+- history | grep init.e
+- ls helm-core-20250923.617/
+- ls helm-20250923.601/
+- emacs --batch -l package  --eval "(package-initialize)"  --eval "(package-generate-autoloads \"helm-core\" \"./helm-core-20250923.617")"
+- emacs --batch -l package   --eval "(package-initialize)"   --eval "(package-generate-autoloads \"helm-core\" \"./helm-core-20250923.617\")"
+- emacs -Q --batch -l package   --eval "(package-initialize)"   --eval "(package-generate-autoloads \"helm-core\" \"./helm-core-20250923.617\")"
+- cd helm-core-20250923.617/
+- emacs -Q --batch -l package   --eval "(package-initialize)"   --eval "(package-generate-autoloads \"helm\" \"./helm-20250923.601\")"
+- history | grep init.el
+- history | grep &
+- history | grep ema
+- cd ~/lazycat-emacs/site-lisp/extensions/consult-20250920.1256/
+- emacs -Q --batch -l package   --eval "(package-initialize)"   --eval "(package-generate-autoloads \"consult\" \"./consult-20250920.1256\")"
+- cd consult-20250920.1256/
+- ps aux | grep fcitx5
+- source ~/.xprofile
+- echo $DBUS_SESSION_BUS_ADDRESS
+- eval $(dbus-launch --sh-syntax)
+- fcitx5-configtool
+- vim ~/.profile
+- vim ~/.xprofile
+- cd lazycat-emacs/site-lisp/extensions/
+- history | grep cur
+- curl -L -o consult.tar https://melpa.org/packages/fcitx-20240121.1829.tar
+- tar -xf consult.tar 
+- mv consult.tar /tmp
+- emacs -Q --batch -l package   --eval "(package-initialize)"   --eval "(package-generate-autoloads \"fcitx\" \"./fcitx-20240121.1829\")"
+- cd fcitx-20240121.1829/
+- vim ~/lazycat-emacs/site-lisp/config/init.el
+- nano 
+-  emacs /mnt/d/xgzhang/projects/svn/Elafs/branches/asp 
+-  emacs /mnt/d/xgzhang/projects/svn/Elafs/branches/asp &
+- sudo pacman -S fcitx5 fcitx5-configtool fcitx5-chinese-addons
+- cd lazycat-emacs/site-lisp/extensions/fcitx-20240121.1829/
+- vim fcitx.el 
+- rm ~/.emacs.desktop
+- cd .emacs.d/
+- cd .cache/
+- cd lsp-bridge-jdtls/
+- cd asp-b1727afe48d863faba6f684a6f4a1c11/
+- type jdtls.json 
+- cat jdtls.json | xsel -b
+- history | grep sudo
+- sudo paceman -S xclip
+- sudo pacman -S xclip
+- cat jdtls.json | xclip -selection clipboard
+- vim jdtls.json 
+- cd ~
+- vim .bashrc 
+- pwd
+- vim ~/lazycat-emacs/site-lisp/config/init-key.el 
+- clea
+- yay -S sogoupinyin
+- vim ~/lazycat-emacs/site-lisp/config/init.el 
+- vim ~/.bashrc 
+- sed -n "30:$/p" ~/.bashrc
+- sed -n "30:$p" ~/.bashrc
+- sed -n 30:$p ~/.bashrc
+- history | grep sed
+- sed -n '30:$p' ~/.bashrc
+- sed -n '30,$p' ~/.bashrc
+- sed -n '10,$p' ~/.bashrc
+-  fcitx5 >/dev/null 2>&1 &
+- sudo pacman -S debtap
+- sudo pacman -S alien
+- history | grep vim
+- cd lazycat-emacs/
+- cd site-lisp/extensions/
+- history | grep curl
+-  curl -L -o consult.tar https://melpa.org/packages/marginalia-20250920.852.tar
+- history | grep tar
+-  tar -xf consult.tar
+-  mv consult.tar /tmp
+- cd marginalia-20250920.852/
+- history | grep emacs
+- cd ..
+-  emacs -Q --batch -l package   --eval "(package-initialize)"   --eval "(package-generate-autoloads \"marginalia\" \"./marginalia-20250920.852\")"
+-  vim ~/lazycat-emacs/site-lisp/config/init.el
+- emacs /mnt/d/xgzhang/projects/svn/Elafs/branches/asp &
+- cd ~/lazycat-emacs/
+- git diff ./site-lisp/config/init-key.el
+- git diff site-lisp/config/init-key.el
+- vim ./site-lisp/config/init-key.el
+- emacs --debug-init
+- mv site-lisp/config/init-key.el site-lisp/config/init-key.el.bak
+- mv site-lisp/config/init-key.el.bak site-lisp/config/init-key.el
+- cp site-lisp/config/init-key.el site-lisp/config/init-key.el.bak
+- git restore site-lisp/config/init-key.el
+- fg
+- vim site-lisp/config/init-key.el.bak
+- emacs
+- mv site-lisp/config/init-key.el.bak  ~/.cache/
+- ls
+- git commit -m "complete"
+- git remote add github https://github.com/zhangxingong/lazycat-emacs.git
+- sudo pacman -Sy
+- sudo pacman -Syu
+- sudo pacman -S less
+- less --version
+- git branch
+- ls -al ~/.ssh/id_*.pub
+- sudo pacman -S openssh
+- ssh-keygen -t ed25519 -C "gxz418@126.com"
+- cat ~/.ssh/id_ed25519.pub
+- git remote set-url github git@github.com:zhangxingong/lazycat-emacs.git
+- git branch -v
+- git remote -v
+- ssh -T git@github.com
+- git push -u github master
+- vim site-lisp/config/init-key.el
+- git add .
+- git commit -m "fix key"
+- git push
+- git status
+- cls
+- clear
+- history -a
