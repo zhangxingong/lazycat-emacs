@@ -596,7 +596,7 @@
 ;; lazy-load 全局快捷键
 (lazy-load-global-keys
  '(
-   ("M-;    " . avy-goto-char)
+   ("M-;" . avy-goto-char)
    ("M-L" . avy-goto-line)
    ("M-W" . avy-goto-word-0)
    ("C-c <SPC>" . avy-goto-word-1)
