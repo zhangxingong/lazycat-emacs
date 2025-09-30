@@ -647,6 +647,11 @@
  '(("s-'" . imenu-list-minor-mode))
  "imenu-list")
 
+(lazy-load-global-keys
+ '(("C-a" . mwim-beginning-of-code-or-line)
+   ("C-e" . mwim-end-of-code-or-line))
+ "mwim")
+
 ;; lazy-load 全局快捷键（不写 require）
 ;(lazy-load-global-keys
 ; '(
