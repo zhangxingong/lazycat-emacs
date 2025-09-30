@@ -230,7 +230,7 @@
 (lazy-load-global-keys
  '(
    ("C-'" . delete-current-buffer-and-window) ;关闭当前buffer, 并关闭窗口
-   ("C-\"" . delete-current-buffer-window)    ;删除当前buffer的窗口
+   ("C-|" . delete-current-buffer-window)    ;删除当前buffer的窗口
    ("C-x O" . toggle-window-split)
    )
  "window-extension")
