@@ -107,9 +107,9 @@
 ;;; Code:
 
 ;; You need configuration your own local proxy program first.
-;; (setq eaf-proxy-type "socks5")
-;; (setq eaf-proxy-host "127.0.0.1")
-;; (setq eaf-proxy-port "1080")
+(setq eaf-proxy-type "http")
+(setq eaf-proxy-host "192.168.1.7")
+(setq eaf-proxy-port "7777")
 
 ;; Make `eaf-browser-restore-buffers' restore last close browser buffers.
 (setq eaf-browser-continue-where-left-off t)
@@ -130,8 +130,8 @@
 (eaf-bind-key refresh_page "M-r" eaf-browser-keybinding)
 
 (setq eaf-webengine-default-zoom (if (> (frame-pixel-width) 2000) 1.5 1))
-(setq eaf-browser-aria2-proxy-host "127.0.0.1")
-(setq eaf-browser-aria2-proxy-port "9888")
+(setq eaf-browser-aria2-proxy-host "192.168.1.7")
+(setq eaf-browser-aria2-proxy-port "7777")
 (setq eaf-browser-enable-adblocker nil)
 (setq eaf-browser-enable-autofill t)
 (setq eaf-music-play-order "random")
@@ -143,9 +143,9 @@
 (setq eaf-webengine-fixed-font-size 18)
 (setq eaf-jupyter-font-family "WenQuanYi Micro Hei Mono")
 (setq eaf-file-manager-show-hidden-file nil)
-(setq eaf-music-default-file "/home/andy/Music/")
+(setq eaf-music-default-file "/home/ethan/Music/")
 (setq eaf-music-player-buffer " *eaf music player*") ;改成隐藏标签， 避免标签kill掉后关闭音乐
-(setq eaf-music-cache-dir "/home/andy/Music/Favorite")
+(setq eaf-music-cache-dir "/home/ethan/Music/Favorite")
 (setq eaf-pyqterminal-font-family "FiraCode Nerd Font Mono")
 (setq eaf-pyqterminal-font-size 24)
 (setq eaf-jupyter-font-family "FiraCode Nerd Font Mono")
