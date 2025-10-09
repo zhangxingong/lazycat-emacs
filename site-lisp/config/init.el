@@ -101,10 +101,10 @@
 
 (require 'project)
 
-(customize-set-variable
- 'blink-search-common-directory
- `(("HOME" "/mnt/d/xgzhang/projects/svn/Elafs/branches/asp")
-))
+;;(customize-set-variable
+ ;;'blink-search-common-directory
+ ;;`(("HOME" "/mnt/d/xgzhang/projects/svn/Elafs/branches/asp")
+;;))
 
 (setq warning-minimum-level :error)
 
@@ -233,7 +233,7 @@
          ))))
 
 ;; Variables configured via the interactive 'customize' interface
-(when (file-exists-p custom-file)
-  (load custom-file))
+;;(when (file-exists-p custom-file)
+;;  (load custom-file))
 
 (provide 'init)
