@@ -88,10 +88,10 @@
 ;; (setq emigo-model "openrouter/deepseek/deepseek-chat-v3-0324")
  ;; (setq emigo-model "openrouter/anthropic/claude-3.7-sonnet")
 ;;(setq emigo-model "openrouter/google/gemini-2.5-pro-exp-03-25:free")
-(setq emigo-model "openrouter/google/gemini-2.5-pro-preview")
-(setq emigo-base-url "https://openrouter.ai/api/v1")
+(setq emigo-model "deepseek/deepseek-chat")
+(setq emigo-base-url "https://api.deepseek.com")
 (setq emigo-api-key (with-temp-buffer
-                      (insert-file-contents  "~/.config/openrouter/key.txt")
+                      (insert-file-contents  "~/.config/deepseek/key.txt")
                       (string-trim (buffer-string))))
 
 
