@@ -230,10 +230,12 @@
          (emacs-session-restore)
 
          (require 'init-sort-tab)
-         ))))
 
 ;; Variables configured via the interactive 'customize' interface
-;;(when (file-exists-p custom-file)
-;;  (load custom-file))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+         ))))
+
 
 (provide 'init)
