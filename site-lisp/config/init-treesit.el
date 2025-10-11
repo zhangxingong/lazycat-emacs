@@ -106,6 +106,7 @@
         (haskell "https://github.com/tree-sitter/tree-sitter-haskell" "master" "src" nil nil)
         (html . ("https://github.com/tree-sitter/tree-sitter-html"))
         (java       . ("https://github.com/tree-sitter/tree-sitter-java.git"))
+        (jsp        . ("https://github.com/merico-dev/tree-sitter-jsp.git"))
         (javascript . ("https://github.com/tree-sitter/tree-sitter-javascript"))
         (json . ("https://github.com/tree-sitter/tree-sitter-json"))
         (lua . ("https://github.com/Azganoth/tree-sitter-lua"))
@@ -156,6 +157,7 @@
                                   (pcase (file-name-extension file-name)
                                     ("vue" 'vue)
                                     ("html" 'html)
+                                    ("jsp" 'jsp)
                                     ("php" 'php))))
                                )))
 
