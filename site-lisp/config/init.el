@@ -75,6 +75,8 @@
 ;; Allow users to provide an optional "init-preload-local.el"
 ;; (require 'init-preload-local nil t)
 
+;;;(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
 ;; 最大化打开文件数
 ;;(setq w32-max-handles 2048)
 

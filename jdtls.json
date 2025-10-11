@@ -1,0 +1,75 @@
+{
+    "name": "jdtls",
+    "languageId": "java",
+    "command": [
+        "jdtls",
+        "-data",
+        "/home/ethan/.cache/lsp-bridge-jdtls/asp-b1727afe48d863faba6f684a6f4a1c11/jdtls-data"
+    ],
+    "workspaceFolders": [
+        "/mnt/d/xgzhang/projects/svn/Elafs/branches"
+    ],
+    "settings": null,
+    "capabilities": {
+        "textDocument": {
+            "hover": {
+                "contentFormat": [
+                    "markdown"
+                ]
+            }
+        }
+    },
+    "initializationOptions": {
+        "settings": {
+            "java": {
+                "maxConcurrentBuilds": 1,
+                "autobuild": {
+                    "enabled": true
+                },
+                "import": {
+                    "maven": {
+                        "enabled": false
+                    }
+                },
+                "configuration": {
+                    "updateBuildConfiguration": "automatic",
+                    "checkProjectSettingsExclusions": true
+                },
+                "project": {
+                    "importHint": true,
+                    "importOnFirstTimeStartup": "automatic",
+                    "referencedLibraries": [
+                        "web/WEB-INF/lib/**"
+                    ],
+                    "outputPath": "build"
+                },
+                "server": {
+                    "launchMode": "Hybrid"
+                },
+                "completion": {
+                    "guessMethodArguments": true,
+                    "overwrite": true,
+                    "enabled": true,
+                    "snippets": {
+                        "enabled": true
+                    },
+                    "favoriteStaticMembers": [
+                        "org.junit.Assert.*",
+                        "org.junit.Assume.*",
+                        "org.junit.jupiter.api.Assertions.*",
+                        "org.junit.jupiter.api.Assumptions.*",
+                        "org.junit.jupiter.api.DynamicContainer.*",
+                        "org.junit.jupiter.api.DynamicTest.*",
+                        "org.mockito.Mockito.*",
+                        "org.mockito.ArgumentMatchers.*",
+                        "org.mockito.Answers.*"
+                    ]
+                }
+            }
+        },
+        "extendedClientCapabilities": {
+            "classFileContentsSupport": true,
+            "overrideMethodsPromptSupport": true
+        }
+    }
+}

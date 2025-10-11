@@ -161,6 +161,15 @@
                                     ("php" 'php))))
                                )))
 
+(add-hook 'org-mode-hook #'(lambda ()
+                             (let ((file-name (buffer-file-name)))
+                               (when file-name
+                                 (treesit-parser-create
+                                  (pcase (file-name-extension file-name)
+                                    ("org" 'org)
+                                    )))
+                               )))
+
 (add-hook 'markdown-ts-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
 (add-hook 'zig-mode-hook #'(lambda () (treesit-parser-create 'zig)))
 (add-hook 'mojo-mode-hook #'(lambda () (treesit-parser-create 'mojo)))

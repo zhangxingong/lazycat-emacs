@@ -1,0 +1,10 @@
+-*- mode: org -*-
+* Tasks
+** TODO 调试了一下archLinux下的emacs設置
+** TODO 解决了字体切换问题，如果要临时切换到英文按下LShift
+** (abort-recursive-edit)
+[2025-09-25 Thu]
+** (setq blink-search-enable-posframe t) 设置blinksearch显示方式为弹窗
+** 专业emacs入门：基础操作
+ [专业 Emacs 入门（二）：基础操作 - 知乎](https://zhuanlan.zhihu.com/p/403076883)
+[[https://zhuanlan.zhihu.com/p/403076883][专业 Emacs 入门（二）：基础操作 - 知乎]]
