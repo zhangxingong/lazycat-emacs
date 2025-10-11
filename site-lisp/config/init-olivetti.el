@@ -92,7 +92,7 @@
   (add-hook hook
             #'(lambda ()
                 (olivetti-mode 1)
-                (olivetti-set-width 120)
+                (olivetti-set-width 220)
                 )))
 
 (dolist (hook (list
@@ -105,7 +105,7 @@
                 (when (buffer-file-name)
                   (unless (string-prefix-p "README" (file-name-base (buffer-file-name)))
                     (olivetti-mode 1)
-                    (olivetti-set-width 120))))))
+                    (olivetti-set-width 220))))))
 
 (provide 'init-olivetti)
 
