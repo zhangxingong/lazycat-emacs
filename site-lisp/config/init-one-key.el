@@ -93,9 +93,9 @@
    (("j" . "Picture") . (lambda () (interactive) (eaf-open-in-file-manager "/data/Picture")))
    (("m" . "Music") . (lambda () (interactive) (eaf-open-in-file-manager "/data/Music")))
    (("c" . "Config") . (lambda () (interactive) (eaf-open-in-file-manager lazycat-emacs-config-dir)))
-   ((";" . "Extension") . (lambda () (interactive) (eaf-open-in-file-manager "/home/andy/lazycat-emacs/site-lisp/extensions")))
-   (("o" . "EAF") . (lambda () (interactive) (eaf-open-in-file-manager "/home/andy/lazycat-emacs/site-lisp/extensions/emacs-application-framework")))
-   (("l" . "LazyCat") . (lambda () (interactive) (eaf-open-in-file-manager "/home/andy/microserver")))
+   ((";" . "Extension") . (lambda () (interactive) (eaf-open-in-file-manager "/home/ethan/lazycat-emacs/site-lisp/extensions")))
+   (("o" . "EAF") . (lambda () (interactive) (eaf-open-in-file-manager "/home/ethan/lazycat-emacs/site-lisp/extensions/emacs-application-framework")))
+   (("l" . "LazyCat") . (lambda () (interactive) (eaf-open-in-file-manager "/home/ethan/microserver")))
    )
  t)
 
