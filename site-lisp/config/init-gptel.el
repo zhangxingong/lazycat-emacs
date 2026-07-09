@@ -90,18 +90,19 @@
    ("RET" . gptel-return-dwim))
  gptel-mode-map)
 
-(setq open-router-key (with-temp-buffer
-                        (insert-file-contents "~/.config/openrouter/key.txt")
+(setq deepseek-api-key (with-temp-buffer
+                        (insert-file-contents "~/.config/deepseek/key.txt")
                         (string-trim (buffer-string))))
 
-(setq gptel-model "anthropic/claude-3.5-sonnet"
+(setq gptel-model "deepseek-v4-flash"
       gptel-backend
       (gptel-make-openai "OpenRouter"
-        :host "openrouter.ai"
-        :endpoint "/api/v1/chat/completions"
+        :host "api.deepseek.com"
+        :endpoint "/v1/chat/completions"
         :stream t
-        :key open-router-key
-        :models '("anthropic/claude-3.5-sonnet")))
+        :key deepseek-api-key
+        :models '("deepseek-v4-flash")))
+
 
 (defun start-gptel ()
   (interactive)
